@@ -1,10 +1,10 @@
 const express = require('express')
-const cookieParser = require('cookie-parser')
 const cookieSession = require('cookie-session')
 const app = express();
 const port = 8080;
+
 app.use(express.json());
-app.use(cookieParser());
+
 app.use(cookieSession({
   name: 'user',
   httpOnly:true,
